@@ -14,6 +14,11 @@ Enables a portfolio post type for use in any of our Chill Themes.
 
 This plugin provides you with a new post type aptly named **Portfolio** and two new taxonomies; **Roles** and **Types** to use with any theme you want, obviously it was created for use in our themes.
 
+If you're looking for a theme that was designed specifically to work with this plugin, here's two:
+
+* <a href="http://themes.chillthemes.com/?theme=edgetype">EdgeType</a>
+* <a href="http://themes.chillthemes.com/?theme=haystack">Haystack</a>
+
 == Installation ==
 
 1. Upload the 'chillthemes-portfolio' folder to the '/wp-content/plugins/' directory.
