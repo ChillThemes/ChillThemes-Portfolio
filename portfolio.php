@@ -2,7 +2,7 @@
 
 /*
 Plugin Name: ChillThemes Portfolio
-Plugin URI: http://chillthemes.com/item/portfolio
+Plugin URI: https://github.com/chillthemes/chillthemes-portfolio
 Description: Enables a portfolio post type for use in any of our Chill Themes.
 Version: 1.0
 Author: ChillThemes
