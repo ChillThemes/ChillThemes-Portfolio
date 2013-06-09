@@ -16,8 +16,8 @@ This plugin provides you with a new post type aptly named **Portfolio** and two 
 
 If you're looking for a theme that was designed specifically to work with this plugin, here's two:
 
-* <a href="http://themes.chillthemes.com/?theme=edgetype">EdgeType</a>
-* <a href="http://themes.chillthemes.com/?theme=haystack">Haystack</a>
+* <a href="http://demos.chillthemes.com/edgetype">EdgeType</a>
+* <a href="http://demos.chillthemes.com/haystac">Haystack</a>
 
 == Installation ==
 
@@ -43,10 +43,6 @@ Yes! Here's a list of available filters:
 6. 'apply_filters( 'chillthemes_portfolio_type_taxonomy', 'type' );'
 7. 'apply_filters( 'chillthemes_portfolio_project', 'portfolio' );'
 8. 'apply_filters( 'chillthemes_portfolio_type_taxonomy_args', $type_args );'
-
-== Screenshots ==
-
-1. This screenshot shows the Add New post screen for the "Portfolio" post type.
 
 == Changelog ==
 
