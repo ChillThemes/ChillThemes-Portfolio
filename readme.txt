@@ -17,7 +17,7 @@ This plugin provides you with a new post type aptly named **Portfolio** and two 
 If you're looking for a theme that was designed specifically to work with this plugin, here's two:
 
 * <a href="http://demos.chillthemes.com/edgetype">EdgeType</a>
-* <a href="http://demos.chillthemes.com/haystac">Haystack</a>
+* <a href="http://demos.chillthemes.com/haystack">Haystack</a>
 
 == Installation ==
 
@@ -47,9 +47,4 @@ Yes! Here's a list of available filters:
 == Changelog ==
 
 = 1.0 =
-* Fresh out of the oven.
-
-== Upgrade Notice ==
-
-= 1.0 =
-* Fresh out of the oven, no need to upgrade.
+* Fresh out of the oven, careful it's hot.
