@@ -16,8 +16,8 @@ This plugin provides you with a new post type aptly named **Portfolio** and two 
 
 If you're looking for a theme that was designed specifically to work with this plugin, here's two:
 
-* <a href="http://demos.chillthemes.com/edgetype">EdgeType</a>
-* <a href="http://demos.chillthemes.com/haystack">Haystack</a>
+* http://demos.chillthemes.com/edgetype
+* http://demos.chillthemes.com/haystack
 
 == Installation ==
 
