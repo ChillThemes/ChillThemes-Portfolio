@@ -17,7 +17,7 @@ This plugin provides you with a new post type aptly named **Portfolio** and two 
 If you're looking for a theme that was designed specifically to work with this plugin, here's two:
 
 * <a href="http://demos.chillthemes.com/edgetype">EdgeType</a>
-* <a href="http://demos.chillthemes.com/haystac">Haystack</a>
+* <a href="http://demos.chillthemes.com/haystack">Haystack</a>
 
 == Installation ==
 
@@ -29,7 +29,11 @@ If you're looking for a theme that was designed specifically to work with this p
 
 = Will this work with any WordPress theme? =
 
-In short, yes it will. This plugin will provide you with all you need to setup a portfolio using WordPress. You'll just have to provide the post type archive, taxonomy, single portfolio, and portfolio page templates.
+Yes it will. This plugin will provide you with all you need to setup a portfolio using WordPress. You'll just have to provide the post type archive, taxonomy, single portfolio, and portfolio page templates.
+
+= Is there a widget to go along with this plugin? =
+
+Yes, it most certainly does! If you install and activate our <a href="https://github.com/chillthemes/chillthemes-widgets>ChillThemes Widgets</a> plugin along with this one, you'll see a new widget aptly titled Portfolio.
 
 = Are there filters? =
 
@@ -47,9 +51,4 @@ Yes! Here's a list of available filters:
 == Changelog ==
 
 = 1.0 =
-* Fresh out of the oven.
-
-== Upgrade Notice ==
-
-= 1.0 =
-* Fresh out of the oven, no need to upgrade.
+* Fresh out of the oven, careful it's hot.
