@@ -1,10 +1,10 @@
-=== Plugin Name ===
+=== ChillThemes Portfolio ===
 Contributors: chillthemes
 Donate link: http://chillthemes.com/donate
 Tags: chillthemes, portfolio, post-type, taxonomies
 Requires at least: 3.0
 Tested up to: 3.6
-Stable tag: 1.0
+Stable tag: 1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -65,6 +65,9 @@ Yes! Here's a list of available filters:
 8. 'apply_filters( 'chillthemes_portfolio_type_taxonomy_args', $type_args );'
 
 == Changelog ==
+
+= 1.1 =
+* Added AJAX portfolio sorting.
 
 = 1.0 =
 * Fresh out of the oven, careful it's hot.

@@ -4,7 +4,7 @@
 Plugin Name: ChillThemes Portfolio
 Plugin URI: http://wordpress.org/plugins/chillthemes-portfolio
 Description: Enables a portfolio post type for use in any of our Chill Themes.
-Version: 1.0
+Version: 1.1
 Author: ChillThemes
 Author URI: http://chillthemes.com
 Author Email: matt@chillthemes.com
@@ -267,6 +267,87 @@ function chillthemes_portfolio_column( $column ) {
 		/* Just break out of the switch statement for everything else. */
 		default : break;
 	}
+}
+
+/* Sort the order of the posts using AJAX. */
+function chillthemes_portfolio_sorting_page() {
+	$chillthemes_portfolio_sort = add_submenu_page( 'edit.php?post_type=portfolio', __( 'Sort Portfolios', 'ChillThemes' ), __( 'Sort', 'ChillThemes' ), 'edit_posts', basename( __FILE__ ), 'chillthemes_portfolio_post_sorting_interface' );
+
+	add_action( 'admin_print_scripts-' . $chillthemes_portfolio_sort, 'chillthemes_portfolio_scripts' );
+	add_action( 'admin_print_styles-' . $chillthemes_portfolio_sort, 'chillthemes_portfolio_styles' );
+}
+add_action( 'admin_menu', 'chillthemes_portfolio_sorting_page' );
+
+/* Create the AJAX sorting interface. */
+function chillthemes_portfolio_post_sorting_interface() {
+   $portfolios = new WP_Query(
+    	array(
+    		'orderby' => 'menu_order',
+    		'order' => 'ASC',
+    		'posts_per_page' => -1,
+    		'post_type' => 'portfolio'
+    	)
+    );
+?>
+
+	<div class="wrap">
+
+		<?php screen_icon( 'tools' ); ?>
+
+		<h2><?php _e( 'Sort Portfolio Items', 'ChillThemes' ); ?></h2>
+
+		<p><?php _e( 'Drag and drop the items into the order in which you want them to display.', 'ChillThemes' ); ?></p>			
+
+		<ul id="chillthemes-portfolio-list">
+
+			<?php while ( $portfolios->have_posts() ) : $portfolios->the_post(); if ( get_post_status() == 'publish' ) : ?>
+
+				<li id="<?php the_id(); ?>" class="menu-item">
+
+					<dl class="menu-item-bar">
+
+						<dt class="menu-item-handle">
+							<span class="menu-item-title"><?php the_title(); ?></span>
+						</dt><!-- .menu-item-handle -->
+
+					</dl><!-- .menu-item-bar -->
+
+					<ul class="menu-item-transport"></ul>
+
+				</li><!-- .menu-item -->
+
+			<?php endif; endwhile; wp_reset_postdata(); ?>
+
+		</ul><!-- #chillthemes-portfolio-list -->
+
+	</div><!-- .wrap -->
+
+<?php }
+
+/* Save the order of the items when it is modified. */
+function chillthemes_portfolio_save_sorted_order() {
+	global $wpdb;
+
+	$order = explode( ',', $_POST['order'] );
+	$counter = 0;
+
+	foreach( $order as $portfolio_id ) {
+		$wpdb->update( $wpdb->posts, array( 'menu_order' => $counter ), array( 'ID' => $portfolio_id ) );
+		$counter++;
+	}
+	die(1);
+}
+add_action( 'wp_ajax_portfolio_sort', 'chillthemes_portfolio_save_sorted_order' );
+
+/* Load the scripts required for the AJAX sorting. */
+function chillthemes_portfolio_scripts() {
+	wp_enqueue_script( 'jquery-ui-sortable' );
+ 	wp_enqueue_script( 'chillthemes-portfolio-sorting', CHILLTHEMES_PORTFOLIO_URI . '/js/sort.js' );
+}
+
+/* Load the styles required for the AJAX sorting. */
+function chillthemes_portfolio_styles() {
+	wp_enqueue_style( 'nav-menu' );
 }
 
 ?>
