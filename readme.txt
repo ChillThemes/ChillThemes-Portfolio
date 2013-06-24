@@ -67,7 +67,7 @@ Yes! Here's a list of available filters:
 == Changelog ==
 
 = 1.1 =
-* Added AJAX portfolio sorting.
+* Added AJAX portfolio sorting in the admin.
 
 = 1.0 =
 * Fresh out of the oven, careful it's hot.
