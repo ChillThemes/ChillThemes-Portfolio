@@ -4,10 +4,10 @@
 Plugin Name: ChillThemes Portfolio
 Plugin URI: http://wordpress.org/plugins/chillthemes-portfolio
 Description: Enables a portfolio post type for use in any of our Chill Themes.
-Version: 1.1
+Version: 1.2
 Author: ChillThemes
-Author URI: http://chillthemes.com
-Author Email: matt@chillthemes.com
+Author URI: http://chillthemes.net
+Author Email: itismattadams@gmail.com
 License:
 
   This program is free software; you can redistribute it and/or modify
@@ -38,7 +38,7 @@ register_deactivation_hook( __FILE__, 'chillthemes_portfolio_deactivation' );
 function chillthemes_portfolio_setup() {
 
 	/* Define the plugin version. */
-	define( 'CHILLTHEMES_PORTFOLIO_VER', '1.0' );
+	define( 'CHILLTHEMES_PORTFOLIO_VER', '1.2' );
 
 	/* Get the plugin directory URI. */
 	define( 'CHILLTHEMES_PORTFOLIO_URI', plugin_dir_url( __FILE__ ) );
@@ -97,7 +97,7 @@ function chillthemes_register_portfolio() {
 		'menu_icon'			=> CHILLTHEMES_PORTFOLIO_URI . '/images/menu-icon.png',
 		'public'			=> true,
 		'query_var'			=> 'project',
-		'rewrite'			=> array( 'slug' => 'portfolio/item', 'with_front' => false ),
+		'rewrite'			=> array( 'slug' => 'portfolio', 'with_front' => false ),
 		'supports'			=> array( 'comments', 'custom-fields', 'editor', 'excerpt', 'revisions', 'thumbnail', 'title' )
 	);
 
@@ -186,11 +186,11 @@ function chillthemes_portfolio_taxonomies() {
 /* Filter the columns on the custom post type admin screen. */
 function chillthemes_portfolio_columns( $columns ) {
 	$columns = array(
-		'cb'	=> '<input type="checkbox" />',
-		'title'	=> __( 'Project Title', 'ChillThemes' ),
-		'role'	=> __( 'Project Role', 'ChillThemes' ),
-		'type'	=> __( 'Project Type', 'ChillThemes' ),
-		'image'	=> __( 'Project Image', 'ChillThemes' )
+		'cb'							=> '<input type="checkbox" />',
+		'title'							=> __( 'Project Title', 'ChillThemes' ),
+		'chillthemes-portfolio-role'	=> __( 'Project Role', 'ChillThemes' ),
+		'chillthemes-portfolio-type'	=> __( 'Project Type', 'ChillThemes' ),
+		'chillthemes-portfolio-image'	=> __( 'Project Image', 'ChillThemes' )
 	);
 	return $columns;
 }
@@ -200,12 +200,12 @@ function chillthemes_portfolio_column( $column ) {
 	switch( $column ) {
 
 		/* If displaying the 'Image' column. */
-		case 'image' :
+		case 'chillthemes-portfolio-image' :
 			$return = '<img src="' . the_post_thumbnail( array( 40, 40 ) ) . '" alt="' . get_the_title() . '" />';
 		break;
 
 		/* If displaying the 'Role' column. */
-		case 'role' :
+		case 'chillthemes-portfolio-role' :
 
 			/* Get the terms for the post. */
 			$terms = get_the_terms( get_the_ID(), 'role' );
@@ -235,7 +235,7 @@ function chillthemes_portfolio_column( $column ) {
 		break;
 
 		/* If displaying the 'Type' column. */
-		case 'type' :
+		case 'chillthemes-portfolio-type' :
 
 			/* Get the terms for the post. */
 			$terms = get_the_terms( get_the_ID(), 'type' );

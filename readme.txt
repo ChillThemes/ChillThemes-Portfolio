@@ -1,10 +1,9 @@
 === ChillThemes Portfolio ===
 Contributors: chillthemes
-Donate link: http://chillthemes.com/donate
 Tags: chillthemes, portfolio, post-type, taxonomies
 Requires at least: 3.0
 Tested up to: 3.6
-Stable tag: 1.1
+Stable tag: 1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -16,8 +15,8 @@ This plugin provides you with a new post type aptly named **Portfolio** and two 
 
 If you're looking for a theme that was designed specifically to work with this plugin, here's two:
 
-* http://demos.chillthemes.com/edgetype
-* http://demos.chillthemes.com/haystack
+* http://demos.chillthemes.net/edgetype
+* http://demos.chillthemes.net/haystack
 
 == Installation ==
 
@@ -27,7 +26,6 @@ If you're looking for a theme that was designed specifically to work with this p
 2. Type **ChillThemes Portfolio** into the Search input and click the **Search Plugin** button.
 3. Locate the **ChillThemes Portfolio** in the list of search results and click the **Install Now** button.
 4. Click the **Activate Plugin** link at the bottom of the install screen.
-5. You're done! You'll see a few new widgets in Appearance -> Widgets.
 
 = Using FTP =
 
@@ -35,7 +33,6 @@ If you're looking for a theme that was designed specifically to work with this p
 2. Unzip the package and move it to your plugins directory.
 3. Log into WordPress and navigate to the **Plugins** screen.
 4. Locate **ChillThemes Portfolio** in the list of available plugins and click the **Activate** link.
-5. You're done! You'll see a few new widgets in Appearance -> Widgets.
 
 == Frequently Asked Questions ==
 
@@ -45,7 +42,7 @@ Yes it will. This plugin will provide you with all you need to setup a portfolio
 
 = Is there a widget to go along with this plugin? =
 
-Yes, it most certainly does! If you install and activate our <a href="http://wordpress.org/plugins/chillthemes-widgets">ChillThemes Widgets</a> plugin along with this one, you'll see a new widget aptly titled Portfolio.
+Yes, there certainly is! If you install and activate our <a href="http://wordpress.org/plugins/chillthemes-widgets">ChillThemes Widgets</a> plugin along with this one, you'll see a new widget aptly titled **Portfolio**.
 
 = I'm getting 404 errors, what do I do? =
 
@@ -65,6 +62,9 @@ Yes! Here's a list of available filters:
 8. 'apply_filters( 'chillthemes_portfolio_type_taxonomy_args', $type_args );'
 
 == Changelog ==
+
+= 1.2 =
+* Changed the portfolio slug from "portfolio/item" to "portfolio".
 
 = 1.1 =
 * Added AJAX portfolio sorting in the admin.
